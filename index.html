@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <script>
+        // Function to check user agent and redirect
+        function checkDeviceAndRedirect() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            if (/iPhone/i.test(userAgent)) {
+                window.location.href = "https://apps.apple.com";
+            } else if (/Android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com";
+            }
+        }
+
+        // Run the function as soon as the page loads
+        window.onload = checkDeviceAndRedirect;
+
+        // Function to show the button after a 2-second delay
+        function showButtonWithDelay() {
+            setTimeout(function() {
+                document.getElementById("playStoreLink").style.display = "block";
+            }, 2000);
+
+             setTimeout(function() {
+                document.getElementById("appStoreLink").style.display = "block";
+            }, 2000);
+        }
+
+        // Run the button reveal function when the page loads
+        window.onload = function() {
+            checkDeviceAndRedirect();
+            showButtonWithDelay();
+        };
+    </script>
+</head>
+<body>
+    <a id="playStoreLink" style="display: none;" href="https://play.google.com">Go to PlayStore (Android)</a>
+    <a id="appStoreLink" style="display: none;" href="https://apps.apple.com">Go to AppStore (iOS)</a>
+</body>
+</html>
