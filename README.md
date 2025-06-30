@@ -1,6 +1,6 @@
 # dynamic-link-replacement
 
-As of August 25th 2024, Firebase Dynamic Links have been deprecated (see <a href="https://firebase.google.com/support/dynamic-links-faq">announcement</a>).
+As of August 25th 2025, Firebase Dynamic Links have been deprecated (see <a href="https://firebase.google.com/support/dynamic-links-faq">announcement</a>).
 
 This small repo contains a simple mechanism that redirects to the correct store (or preferably directly to an application) based on the user's browser's `User-Agent` header.
 
